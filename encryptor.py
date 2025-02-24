@@ -8,5 +8,5 @@ def xor_encrypt_decrypt(data: str) -> str:
 
 def xor_decrypt_hex(hex_data: str) -> str:
     """מפענח מחרוזת מוצפנת ב-Hex חזרה לטקסט"""
-    bytes_list = [int(hex_data[i:i+2], 16) ^ SECRET_KEY for i in range(0, len(hex_data), 2)]
+    bytes_list = [int(hex_data[i:i+2], 16) ^ SECRET_KEY for i in range(0, len(hex_data), 3)]
     return "".join(chr(byte) for byte in bytes_list)
